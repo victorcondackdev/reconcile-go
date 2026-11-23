@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.02">
+  <BkToCstmrDbtCdtNtfctn>
+    <GrpHdr>
+      <MsgId>NTF-20261121-0007</MsgId>
+      <CreDtTm>2026-11-21T10:15:00-03:00</CreDtTm>
+    </GrpHdr>
+    <Ntfctn>
+      <Id>NTF-0007</Id>
+      <CreDtTm>2026-11-21T10:15:00-03:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>BR1800360305000010009795493C1</IBAN></Id>
+        <Ccy>BRL</Ccy>
+      </Acct>
+      <Ntry>
+        <NtryRef>N1</NtryRef>
+        <Amt Ccy="BRL">1820.40</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts>BOOK</Sts>
+        <BookgDt><DtTm>2026-11-21T10:14:31-03:00</DtTm></BookgDt>
+        <ValDt><Dt>2026-11-21</Dt></ValDt>
+        <AcctSvcrRef>CN-554433</AcctSvcrRef>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <InstrId>INSTR-88</InstrId>
+              <EndToEndId>NOTPROVIDED</EndToEndId>
+              <TxId>TX-88</TxId>
+            </Refs>
+            <Amt Ccy="BRL">1200.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <RltdPties><Dbtr><Nm>Padaria São João Ltda</Nm></Dbtr></RltdPties>
+            <RmtInf><Strd><CdtrRefInf><Ref>NF-2026-0815</Ref></CdtrRefInf></Strd></RmtInf>
+          </TxDtls>
+          <TxDtls>
+            <Refs><EndToEndId>E99999999202611211014QWERTY12345</EndToEndId></Refs>
+            <Amt Ccy="BRL">620.40</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <RltdPties><Dbtr><Nm>Açougue Boa Carne</Nm></Dbtr></RltdPties>
+            <RmtInf><Ustrd>Fatura 0816</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>Recebimentos consolidados</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <NtryRef>N2</NtryRef>
+        <Amt Ccy="BRL">75.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <RvslInd>true</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt><Dt>2026-11-21</Dt></BookgDt>
+        <AcctSvcrRef>CN-554434</AcctSvcrRef>
+        <AddtlNtryInf>Estorno de crédito</AddtlNtryInf>
+      </Ntry>
+    </Ntfctn>
+  </BkToCstmrDbtCdtNtfctn>
+</Document>

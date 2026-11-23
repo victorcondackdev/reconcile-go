@@ -1,0 +1,24 @@
+# Binaries
+/reconcile
+/gen-dataset
+/cmd/reconcile/reconcile
+/cmd/gen-dataset/gen-dataset
+*.exe
+*.test
+
+# Profiles and coverage
+*.out
+*.prof
+coverage.*
+
+# Generated datasets
+/out/
+/dataset-*/
+
+# Fuzz crashers land in testdata/fuzz and should be committed deliberately
+# as regression inputs.
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store

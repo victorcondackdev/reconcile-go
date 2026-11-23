@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: test (Go ${{ matrix.go }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        go: ["1.22.x", "stable"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: ${{ matrix.go }}
+      - name: gofmt
+        run: test -z "$(gofmt -l . | tee /dev/stderr)"
+      - name: go vet
+        run: go vet ./...
+      - name: go test -race
+        run: go test -race -coverprofile=coverage.out ./...
+      - name: coverage
+        run: |
+          go tool cover -func=coverage.out | tail -1
+          total=$(go tool cover -func=coverage.out | tail -1 | awk '{print substr($3, 1, length($3)-1)}')
+          awk -v t="$total" 'BEGIN { if (t < 88) { print "coverage " t "% is below 88%"; exit 1 } }'
+
+  fuzz:
+    name: fuzz smoke
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - name: fuzz parsers
+        run: |
+          for f in FuzzParseOFX FuzzParseCAMT FuzzParseCSV FuzzParse; do
+            go test ./statement -run '^$' -fuzz "^${f}\$" -fuzztime 15s -fuzzminimizetime 1s
+          done
+          go test ./internal/decimal -run '^$' -fuzz '^FuzzRoundTrip$' -fuzztime 15s -fuzzminimizetime 1s
+
+  bench:
+    name: benchmarks and quality table
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - name: benchmarks
+        run: go test ./match -run '^$' -bench . -benchmem
+      - name: precision / recall
+        run: go run ./cmd/gen-dataset -table -orders 2000 -seeds 5

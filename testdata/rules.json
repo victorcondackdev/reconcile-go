@@ -1,0 +1,19 @@
+{
+  "exact": {"date_window_days": 3},
+  "group": {
+    "rules": [
+      {
+        "name": "pagfacil-credit",
+        "match": "PAGFACIL",
+        "tag": "pagfacil",
+        "fee_min_percent": 2.39,
+        "fee_max_percent": 2.39,
+        "tolerance_cents": 1,
+        "same_date": true,
+        "min_lag_days": 1
+      },
+      {"name": "combined-payment", "require_counterparty": true}
+    ]
+  },
+  "fuzzy": {"date_tolerance_days": 5, "min_score": 0.62}
+}

@@ -1,0 +1,15 @@
+pedido;data;valor;referencia;cliente;descricao;tags
+PED-1001;16/11/2026;1.250,00;E99999999202611161015ABCDE123456;João da Conceição;Pedido loja online;pix
+PED-1002;16/11/2026;89,90;;Maria Aparecida Souza;Pedido loja online;pix
+PED-1003;17/11/2026;349,00;00012345678;Carlos Eduardo Lima;Boleto pedido 1003;boleto
+PED-1004;17/11/2026;120,00;;PagFácil Adquirência;Venda cartão Ana Paula Ribeiro;card|pagfacil
+PED-1005;17/11/2026;75,50;;PagFácil Adquirência;Venda cartão Bruno Reis;card|pagfacil
+PED-1006;17/11/2026;210,35;;PagFácil Adquirência;Venda cartão Clara Nunes;card|pagfacil
+PED-1007;18/11/2026;500,00;;Fernanda Gonçalves;Pedido loja online;pix
+PED-1008;17/11/2026;1.980,00;00087654321;Distribuidora Horizonte Ltda;Boleto atacado;boleto
+PED-1009;19/11/2026;640,00;;Ricardo Almeida;Pedido loja online;ted
+PAG-0042;19/11/2026;-1.540,00;;Transportadora Serra Azul S.A.;Frete novembro;payable
+PED-1011;19/11/2026;99,90;;Patrícia Moraes;Pedido loja online;pix
+PED-1012;20/11/2026;430,00;;Gustavo Henrique Prado;Pedido loja online;pix
+PED-1013;20/11/2026;150,00;;Lucas Ferreira;Pedido loja online;pix
+PED-1014;20/11/2026;80,00;;Lucas Ferreira;Pedido loja online;pix

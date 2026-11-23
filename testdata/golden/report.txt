@@ -1,0 +1,88 @@
+Reconciliation report
+=====================
+
+Statement entries        13   credits 5,952.45, debits -1,579.90
+Expected records         14
+Matches                  10   covering 11 entries and 13 expected records
+  reference               3
+  exact                   3
+  group                   3
+  fuzzy                   1
+  grouped: 2 many-to-one, 1 one-to-many
+Net difference       -12.20 (fees withheld, interest, rounding)
+Unmatched entries         2   50.00
+Unmatched expected        1   99.90
+Suspected duplicates      1
+
+Unmatched statement entries
+---------------------------
+  202611160003             2026-11-16          89.90  PIX RECEBIDO MARIA APARECIDA SOUZA
+  202611200003             2026-11-20         -39.90  TARIFA PACOTE SERVIÇOS
+
+Unmatched expected records
+--------------------------
+  PED-1011                 2026-11-19          99.90  Patrícia Moraes
+
+Suspected duplicates
+--------------------
+  statement 202611160002, 202611160003: same amount, booking date, reference and description
+
+Low-confidence matches (review)
+-------------------------------
+  M0010 fuzzy     0.65  entry 202611240001 430.00 <- expected PED-1012 430.00
+        best-scoring candidate within tolerances: amount equal, date +4 days, counterparty 0.81, description 0.40; score 0.72
+
+Matches
+-------
+  M0001 reference 0.99  entry 202611160001 1,250.00 <- expected PED-1001 1,250.00
+        identifier match: statement reference equals expected reference
+        - reference    statement reference equals expected reference (E99999999202611161015ABCDE123456)
+        - amount       equal
+        - date         same day
+  M0002 reference 0.95  entry 202611180001 349.00 <- expected PED-1003 349.00
+        identifier match: token in statement description equals expected reference
+        - reference    token in statement description equals expected reference (12345678)
+        - amount       equal
+        - date         +1 day
+  M0003 reference 0.86  entry 202611190002 1,977.50 <- expected PED-1008 1,980.00
+        identifier match: token in statement description equals expected reference; amount differs by -2.50
+        - reference    token in statement description equals expected reference (87654321)
+        - amount       differs by -2.50 (0.13%)
+        - date         +2 days
+  M0004 exact     0.98  entry 202611160002 89.90 <- expected PED-1002 89.90
+        same amount, booked same day relative to expected date, counterparty similarity 1.00
+        - amount       equal (89.90)
+        - date         1.00 x 0.50  same day
+        - counterparty 1.00 x 0.50  1.00 "Maria Aparecida Souza" ~ "PIX RECEBIDO MARIA APARECIDA SOUZA"
+  M0005 exact     0.98  entry 202611190003 -1,540.00 <- expected PAG-0042 -1,540.00
+        same amount, booked same day relative to expected date, counterparty similarity 1.00
+        - amount       equal (-1540.00)
+        - date         1.00 x 0.50  same day
+        - counterparty 1.00 x 0.50  1.00 "Transportadora Serra Azul S.A." ~ "PIX ENVIADO TRANSPORTADORA SERRA AZUL S.A."
+  M0006 exact     0.96  entry 202611200001 640.00 <- expected PED-1009 640.00
+        same amount, booked +1 day relative to expected date, counterparty similarity 1.00
+        - amount       equal (640.00)
+        - date         0.75 x 0.50  +1 day
+        - counterparty 1.00 x 0.50  1.00 "Ricardo Almeida" ~ "TED RECEBIDA RICARDO ALMEIDA"
+  M0007 group     0.84  entry 202611180002 396.15 <- expected PED-1004+PED-1005+PED-1006 405.85
+        one entry settles 3 expected records (rule pagfacil-credit): gross 405.85, net 396.15, difference -9.70 (2.39%)
+        - rule         pagfacil-credit
+        - sum          3 records totalling 405.85; entry 396.15
+        - fee          9.70 withheld (2.39% of gross; rule rate 2.39%)
+        - date         all expected on the same date, -1 day relative to entry
+  M0008 group     0.88  entry 202611180003+202611190001 500.00 <- expected PED-1007 500.00
+        expected record paid in 2 parts by the same counterparty, total 500.00
+        - sum          2 entries totalling 500.00; expected 500.00
+        - counterparty mean similarity 1.00 to "Fernanda Gonçalves"
+  M0009 group     0.90  entry 202611200002 230.00 <- expected PED-1013+PED-1014 230.00
+        one entry settles 2 expected records (rule combined-payment): gross 230.00, net 230.00
+        - rule         combined-payment
+        - sum          2 records totalling 230.00; entry 230.00
+        - date         all expected on the same date, same day relative to entry
+        - counterparty mean similarity 1.00
+  M0010 fuzzy     0.65  entry 202611240001 430.00 <- expected PED-1012 430.00
+        best-scoring candidate within tolerances: amount equal, date +4 days, counterparty 0.81, description 0.40; score 0.72
+        - amount       1.00 x 0.35  equal
+        - date         0.33 x 0.20  +4 days
+        - counterparty 0.81 x 0.30  0.81 "Gustavo Henrique Prado" ~ "PIX RECEBIDO GUSTAVO H PRADO"
+        - description  0.40 x 0.15  0.40 "Pedido loja online"

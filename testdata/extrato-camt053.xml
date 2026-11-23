@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.08" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <BkToCstmrStmt>
+    <GrpHdr>
+      <MsgId>STMT-20261125-0001</MsgId>
+      <CreDtTm>2026-11-25T08:00:00-03:00</CreDtTm>
+    </GrpHdr>
+    <Stmt>
+      <Id>STMT-12345-6-202611</Id>
+      <CreDtTm>2026-11-25T08:00:00-03:00</CreDtTm>
+      <FrToDt>
+        <FrDtTm>2026-11-16T00:00:00-03:00</FrDtTm>
+        <ToDtTm>2026-11-24T23:59:59-03:00</ToDtTm>
+      </FrToDt>
+      <Acct>
+        <Id><Othr><Id>0001123456</Id></Othr></Id>
+        <Ccy>BRL</Ccy>
+        <Svcr><FinInstnId><BICFI>FICTBRRJXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="BRL">5000.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-16</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="BRL">8473.55</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-24</Dt></Dt>
+      </Bal>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="BRL">1250.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-16</Dt></BookgDt>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>202611160001</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>OTHR</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>E99999999202611161015ABCDE123456</EndToEndId>
+            </Refs>
+            <Amt Ccy="BRL">1250.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <RltdPties>
+              <Dbtr><Pty><Nm>João da Conceição</Nm></Pty></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>Pix recebido</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="BRL">89.90</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-16</Dt></BookgDt>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>202611160002</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>OTHR</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>NOTPROVIDED</EndToEndId>
+            </Refs>
+            <Amt Ccy="BRL">89.90</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <RltdPties>
+              <Dbtr><Pty><Nm>Maria Aparecida Souza</Nm></Pty></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>Pix recebido</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="BRL">89.90</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-16</Dt></BookgDt>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>202611160003</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>OTHR</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>NOTPROVIDED</EndToEndId>
+            </Refs>
+            <Amt Ccy="BRL">89.90</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <RltdPties>
+              <Dbtr><Pty><Nm>Maria Aparecida Souza</Nm></Pty></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>Pix recebido</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>4</NtryRef>
+        <Amt Ccy="BRL">349.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-18</Dt></BookgDt>
+        <ValDt><Dt>2026-11-18</Dt></ValDt>
+        <AcctSvcrRef>202611180001</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>OTHR</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>NOTPROVIDED</EndToEndId>
+            </Refs>
+            <Amt Ccy="BRL">349.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <RltdPties>
+              <Dbtr><Pty><Nm>Carlos Eduardo Lima</Nm></Pty></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>Liquidação boleto NN 00012345678</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>5</NtryRef>
+        <Amt Ccy="BRL">396.15</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-18</Dt></BookgDt>
+        <ValDt><Dt>2026-11-18</Dt></ValDt>
+        <AcctSvcrRef>202611180002</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>OTHR</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>NOTPROVIDED</EndToEndId>
+            </Refs>
+            <Amt Ccy="BRL">396.15</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <RltdPties>
+              <Dbtr><Pty><Nm>PagFácil Adquirência S.A.</Nm></Pty></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>Liquidação lote 000123</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>6</NtryRef>
+        <Amt Ccy="BRL">300.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-18</Dt></BookgDt>
+        <ValDt><Dt>2026-11-18</Dt></ValDt>
+        <AcctSvcrRef>202611180003</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>OTHR</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>NOTPROVIDED</EndToEndId>
+            </Refs>
+            <Amt Ccy="BRL">300.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <RltdPties>
+              <Dbtr><Pty><Nm>Fernanda Gonçalves</Nm></Pty></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>Pix recebido</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>7</NtryRef>
+        <Amt Ccy="BRL">200.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-19</Dt></BookgDt>
+        <ValDt><Dt>2026-11-19</Dt></ValDt>
+        <AcctSvcrRef>202611190001</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>OTHR</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>NOTPROVIDED</EndToEndId>
+            </Refs>
+            <Amt Ccy="BRL">200.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <RltdPties>
+              <Dbtr><Pty><Nm>Fernanda Gonçalves</Nm></Pty></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>Pix recebido</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>8</NtryRef>
+        <Amt Ccy="BRL">1977.50</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-19</Dt></BookgDt>
+        <ValDt><Dt>2026-11-19</Dt></ValDt>
+        <AcctSvcrRef>202611190002</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>OTHR</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>NOTPROVIDED</EndToEndId>
+            </Refs>
+            <Amt Ccy="BRL">1977.50</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <RltdPties>
+              <Dbtr><Pty><Nm>Distribuidora Horizonte Ltda</Nm></Pty></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>Liquidação boleto NN 00087654321</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>9</NtryRef>
+        <Amt Ccy="BRL">1540.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-19</Dt></BookgDt>
+        <ValDt><Dt>2026-11-19</Dt></ValDt>
+        <AcctSvcrRef>202611190003</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>OTHR</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>NOTPROVIDED</EndToEndId>
+            </Refs>
+            <Amt Ccy="BRL">1540.00</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <RltdPties>
+              <Cdtr><Pty><Nm>Transportadora Serra Azul S.A.</Nm></Pty></Cdtr>
+            </RltdPties>
+            <RmtInf><Ustrd>Pix enviado frete novembro</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>10</NtryRef>
+        <Amt Ccy="BRL">640.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-20</Dt></BookgDt>
+        <ValDt><Dt>2026-11-20</Dt></ValDt>
+        <AcctSvcrRef>202611200001</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>OTHR</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>NOTPROVIDED</EndToEndId>
+            </Refs>
+            <Amt Ccy="BRL">640.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <RltdPties>
+              <Dbtr><Pty><Nm>Ricardo Almeida</Nm></Pty></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>TED recebida</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>11</NtryRef>
+        <Amt Ccy="BRL">230.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-20</Dt></BookgDt>
+        <ValDt><Dt>2026-11-20</Dt></ValDt>
+        <AcctSvcrRef>202611200002</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>OTHR</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>NOTPROVIDED</EndToEndId>
+            </Refs>
+            <Amt Ccy="BRL">230.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <RltdPties>
+              <Dbtr><Pty><Nm>Lucas Ferreira</Nm></Pty></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>Pix recebido</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>12</NtryRef>
+        <Amt Ccy="BRL">39.90</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-20</Dt></BookgDt>
+        <ValDt><Dt>2026-11-20</Dt></ValDt>
+        <AcctSvcrRef>202611200003</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>CCRD</Cd><SubFmlyCd>OTHR</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <AddtlNtryInf>Tarifa pacote serviços</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <NtryRef>13</NtryRef>
+        <Amt Ccy="BRL">430.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-24</Dt></BookgDt>
+        <ValDt><Dt>2026-11-24</Dt></ValDt>
+        <AcctSvcrRef>202611240001</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>OTHR</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>NOTPROVIDED</EndToEndId>
+            </Refs>
+            <Amt Ccy="BRL">430.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <RltdPties>
+              <Dbtr><Pty><Nm>Gustavo H Prado</Nm></Pty></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>Pix recebido</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+    </Stmt>
+  </BkToCstmrStmt>
+</Document>

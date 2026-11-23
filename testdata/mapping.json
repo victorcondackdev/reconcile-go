@@ -1,0 +1,33 @@
+{
+  "statement": {
+    "delimiter": ";",
+    "skip_rows": 2,
+    "decimal_separator": ",",
+    "thousands_separator": ".",
+    "date_format": "dd/mm/yyyy",
+    "columns": {
+      "booking_date": "Data",
+      "id": "Documento",
+      "description": "Histórico",
+      "amount": "Valor (R$)",
+      "direction": "D/C"
+    },
+    "debit_values": ["D"],
+    "skip_descriptions": ["SALDO DO DIA", "SALDO ANTERIOR"]
+  },
+  "expected": {
+    "delimiter": ";",
+    "decimal_separator": ",",
+    "thousands_separator": ".",
+    "date_format": "dd/mm/yyyy",
+    "columns": {
+      "id": "pedido",
+      "date": "data",
+      "amount": "valor",
+      "reference": "referencia",
+      "counterparty": "cliente",
+      "description": "descricao",
+      "tags": "tags"
+    }
+  }
+}
